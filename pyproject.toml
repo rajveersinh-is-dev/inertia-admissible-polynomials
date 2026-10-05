@@ -9,7 +9,7 @@ description = "(q,s)-admissible Boolean polynomials and the graph-inertia expone
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
-authors = [{ name = "daveaddams91-dev" }]
+authors = [{ name = "rajveersinh-is-dev" }]
 keywords = ["graph spectra", "inertia", "Boolean polynomials", "NEPS", "extremal graph theory"]
 classifiers = [
     "Programming Language :: Python :: 3",
@@ -28,7 +28,7 @@ dependencies = [
 dev = ["pytest>=7"]
 
 [project.urls]
-Repository = "https://github.com/daveaddams91-dev/inertia-admissible-polynomials"
+Repository = "https://github.com/rajveersinh-is-dev/inertia-admissible-polynomials"
 
 [tool.setuptools.packages.find]
 where = ["src"]
