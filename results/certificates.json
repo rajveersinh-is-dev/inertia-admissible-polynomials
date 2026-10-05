@@ -1,0 +1,498 @@
+[
+ {
+  "name": "published (7,3)",
+  "q": 7,
+  "s": 3,
+  "m": 2,
+  "order": 128,
+  "trace_moments_ok": true,
+  "trace_moments": [
+   {
+    "k": 1,
+    "trace": 0,
+    "predicted": 0,
+    "ok": true
+   },
+   {
+    "k": 2,
+    "trace": 8320,
+    "predicted": 8320,
+    "ok": true
+   },
+   {
+    "k": 3,
+    "trace": 231936,
+    "predicted": 231936,
+    "ok": true
+   },
+   {
+    "k": 4,
+    "trace": 18818176,
+    "predicted": 18818176,
+    "ok": true
+   },
+   {
+    "k": 5,
+    "trace": 1143183360,
+    "predicted": 1143183360,
+    "ok": true
+   },
+   {
+    "k": 6,
+    "trace": 75790503040,
+    "predicted": 75790503040,
+    "ok": true
+   },
+   {
+    "k": 7,
+    "trace": 4894427736576,
+    "predicted": 4894427736576,
+    "ok": true
+   },
+   {
+    "k": 8,
+    "trace": 318817334909056,
+    "predicted": 318817334909056,
+    "ok": true
+   }
+  ],
+  "closed_form_inertia": [
+   104,
+   0,
+   24
+  ],
+  "numerical": {
+   "numerical_inertia": [
+    104,
+    0,
+    24
+   ],
+   "closed_form_inertia": [
+    104,
+    0,
+    24
+   ],
+   "inertia_equal": true,
+   "numerical_spectrum_sorted": [
+    65.0,
+    9.0,
+    9.0,
+    9.0,
+    9.0,
+    9.0,
+    9.0,
+    9.0,
+    9.0,
+    9.0,
+    9.0,
+    1.0
+   ]
+  },
+  "ok": true
+ },
+ {
+  "name": "(2,1) P=(1-x1)(1-x2)",
+  "q": 2,
+  "s": 1,
+  "m": 2,
+  "order": 4,
+  "trace_moments_ok": true,
+  "trace_moments": [
+   {
+    "k": 1,
+    "trace": 0,
+    "predicted": 0,
+    "ok": true
+   },
+   {
+    "k": 2,
+    "trace": 4,
+    "predicted": 4,
+    "ok": true
+   },
+   {
+    "k": 3,
+    "trace": 0,
+    "predicted": 0,
+    "ok": true
+   },
+   {
+    "k": 4,
+    "trace": 4,
+    "predicted": 4,
+    "ok": true
+   },
+   {
+    "k": 5,
+    "trace": 0,
+    "predicted": 0,
+    "ok": true
+   },
+   {
+    "k": 6,
+    "trace": 4,
+    "predicted": 4,
+    "ok": true
+   },
+   {
+    "k": 7,
+    "trace": 0,
+    "predicted": 0,
+    "ok": true
+   },
+   {
+    "k": 8,
+    "trace": 4,
+    "predicted": 4,
+    "ok": true
+   }
+  ],
+  "closed_form_inertia": [
+   2,
+   0,
+   2
+  ],
+  "numerical": {
+   "numerical_inertia": [
+    2,
+    0,
+    2
+   ],
+   "closed_form_inertia": [
+    2,
+    0,
+    2
+   ],
+   "inertia_equal": true,
+   "numerical_spectrum_sorted": [
+    1.0,
+    1.0,
+    -1.0,
+    -1.0
+   ]
+  },
+  "ok": true,
+  "charpoly_equal": true,
+  "exact_inertia": [
+   2,
+   0,
+   2
+  ],
+  "root_count_inertia": [
+   2,
+   0,
+   2
+  ],
+  "inertia_equal": true,
+  "charpoly": "x**4 - 2*x**2 + 1"
+ },
+ {
+  "name": "(2,1) P=(1-x1)(1-x2)",
+  "q": 2,
+  "s": 1,
+  "m": 3,
+  "order": 9,
+  "trace_moments_ok": true,
+  "trace_moments": [
+   {
+    "k": 1,
+    "trace": 0,
+    "predicted": 0,
+    "ok": true
+   },
+   {
+    "k": 2,
+    "trace": 36,
+    "predicted": 36,
+    "ok": true
+   },
+   {
+    "k": 3,
+    "trace": 36,
+    "predicted": 36,
+    "ok": true
+   },
+   {
+    "k": 4,
+    "trace": 324,
+    "predicted": 324,
+    "ok": true
+   },
+   {
+    "k": 5,
+    "trace": 900,
+    "predicted": 900,
+    "ok": true
+   },
+   {
+    "k": 6,
+    "trace": 4356,
+    "predicted": 4356,
+    "ok": true
+   },
+   {
+    "k": 7,
+    "trace": 15876,
+    "predicted": 15876,
+    "ok": true
+   },
+   {
+    "k": 8,
+    "trace": 66564,
+    "predicted": 66564,
+    "ok": true
+   }
+  ],
+  "closed_form_inertia": [
+   5,
+   0,
+   4
+  ],
+  "numerical": {
+   "numerical_inertia": [
+    5,
+    0,
+    4
+   ],
+   "closed_form_inertia": [
+    5,
+    0,
+    4
+   ],
+   "inertia_equal": true,
+   "numerical_spectrum_sorted": [
+    4.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    -2.0,
+    -2.0,
+    -2.0,
+    -2.0
+   ]
+  },
+  "ok": true,
+  "charpoly_equal": true,
+  "exact_inertia": [
+   5,
+   0,
+   4
+  ],
+  "root_count_inertia": [
+   5,
+   0,
+   4
+  ],
+  "inertia_equal": true,
+  "charpoly": "x**9 - 18*x**7 - 12*x**6 + 81*x**5 + 36*x**4 - 168*x**3 + 144*x - 64"
+ },
+ {
+  "name": "(2,1) P=(1-x1)(1-x2)",
+  "q": 2,
+  "s": 1,
+  "m": 4,
+  "order": 16,
+  "trace_moments_ok": true,
+  "trace_moments": [
+   {
+    "k": 1,
+    "trace": 0,
+    "predicted": 0,
+    "ok": true
+   },
+   {
+    "k": 2,
+    "trace": 144,
+    "predicted": 144,
+    "ok": true
+   },
+   {
+    "k": 3,
+    "trace": 576,
+    "predicted": 576,
+    "ok": true
+   },
+   {
+    "k": 4,
+    "trace": 7056,
+    "predicted": 7056,
+    "ok": true
+   },
+   {
+    "k": 5,
+    "trace": 57600,
+    "predicted": 57600,
+    "ok": true
+   },
+   {
+    "k": 6,
+    "trace": 535824,
+    "predicted": 535824,
+    "ok": true
+   },
+   {
+    "k": 7,
+    "trace": 4769856,
+    "predicted": 4769856,
+    "ok": true
+   },
+   {
+    "k": 8,
+    "trace": 43086096,
+    "predicted": 43086096,
+    "ok": true
+   }
+  ],
+  "closed_form_inertia": [
+   10,
+   0,
+   6
+  ],
+  "numerical": {
+   "numerical_inertia": [
+    10,
+    0,
+    6
+   ],
+   "closed_form_inertia": [
+    10,
+    0,
+    6
+   ],
+   "inertia_equal": true,
+   "numerical_spectrum_sorted": [
+    9.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    -3.0,
+    -3.0
+   ]
+  },
+  "ok": true,
+  "charpoly_equal": true,
+  "exact_inertia": [
+   10,
+   0,
+   6
+  ],
+  "root_count_inertia": [
+   10,
+   0,
+   6
+  ],
+  "inertia_equal": true,
+  "charpoly": "x**16 - 72*x**14 - 192*x**13 + 828*x**12 + 2304*x**11 - 6072*x**10 - 10944*x**9 + 32166*x**8 + 14336*x**7 - 98424*x**6 + 63936*x**5 + 94716*x**4 - 186624*x**3 + 134136*x**2 - 46656*x + 6561"
+ },
+ {
+  "name": "(2,1) P=(1-x1)(1-x2)",
+  "q": 2,
+  "s": 1,
+  "m": 5,
+  "order": 25,
+  "trace_moments_ok": true,
+  "trace_moments": [
+   {
+    "k": 1,
+    "trace": 0,
+    "predicted": 0,
+    "ok": true
+   },
+   {
+    "k": 2,
+    "trace": 400,
+    "predicted": 400,
+    "ok": true
+   },
+   {
+    "k": 3,
+    "trace": 3600,
+    "predicted": 3600,
+    "ok": true
+   },
+   {
+    "k": 4,
+    "trace": 67600,
+    "predicted": 67600,
+    "ok": true
+   },
+   {
+    "k": 5,
+    "trace": 1040400,
+    "predicted": 1040400,
+    "ok": true
+   },
+   {
+    "k": 6,
+    "trace": 16810000,
+    "predicted": 16810000,
+    "ok": true
+   },
+   {
+    "k": 7,
+    "trace": 268304400,
+    "predicted": 268304400,
+    "ok": true
+   },
+   {
+    "k": 8,
+    "trace": 4295491600,
+    "predicted": 4295491600,
+    "ok": true
+   }
+  ],
+  "closed_form_inertia": [
+   17,
+   0,
+   8
+  ],
+  "numerical": {
+   "numerical_inertia": [
+    17,
+    0,
+    8
+   ],
+   "closed_form_inertia": [
+    17,
+    0,
+    8
+   ],
+   "inertia_equal": true,
+   "numerical_spectrum_sorted": [
+    16.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  "ok": true,
+  "charpoly_equal": true,
+  "exact_inertia": [
+   17,
+   0,
+   8
+  ],
+  "root_count_inertia": [
+   17,
+   0,
+   8
+  ],
+  "inertia_equal": true,
+  "charpoly": "x**25 - 200*x**23 - 1200*x**22 + 3100*x**21 + 31920*x**20 - 35000*x**19 - 433200*x**18 + 564550*x**17 + 3527600*x**16 - 7728440*x**15 - 13690000*x**14 + 60598300*x**13 - 24665200*x**12 - 204331400*x**11 + 428125040*x**10 - 154949375*x**9 - 787721200*x**8 + 1831972800*x**7 - 2201382400*x**6 + 1744135"
+ }
+]

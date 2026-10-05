@@ -1,0 +1,44 @@
+[
+ {
+  "q": 3,
+  "s": 1,
+  "ratio": 3.0,
+  "result": "infeasible (exact)"
+ },
+ {
+  "q": 6,
+  "s": 2,
+  "ratio": 3.0,
+  "result": "infeasible (exact)"
+ },
+ {
+  "q": 9,
+  "s": 3,
+  "ratio": 3.0,
+  "result": "not found (heuristic only; not a proof)"
+ },
+ {
+  "q": 10,
+  "s": 3,
+  "ratio": 3.3333333333333335,
+  "result": "not found (heuristic only; not a proof)"
+ },
+ {
+  "q": 11,
+  "s": 3,
+  "ratio": 3.6666666666666665,
+  "result": "not found (heuristic only; not a proof)"
+ },
+ {
+  "q": 12,
+  "s": 3,
+  "ratio": 4.0,
+  "result": "not found (heuristic only; not a proof)"
+ },
+ {
+  "q": 13,
+  "s": 3,
+  "ratio": 4.333333333333333,
+  "result": "not found (heuristic only; not a proof)"
+ }
+]
