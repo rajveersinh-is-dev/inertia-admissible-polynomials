@@ -1,0 +1,5 @@
+__future__
+matplotlib
+numpy
+qspoly
+sympy
