@@ -8,7 +8,8 @@ where $[q]=\{1,\dots,q\}$.  Write $1_S$ for the indicator vector of $S\subseteq[
 $\prod_{i\in T}1_S(i)=1$ iff $T\subseteq S$.
 
 $P$ is a **Boolean polynomial** if $P(x)\in\{0,1\}$ for all $x\in\{0,1\}^q$, equivalently
-if $g(S):=P(1_S)\in\{0,1\}$ for all $S\subseteq[q]$.
+if $g(S):
+    =P(1_S)\in\{0,1\}$ for all $S\subseteq[q]$.
 
 The $g(S)$ and the $c_T$ are related by the (Boolean-lattice) zeta/Mobius pair
 $$g(S)=\sum_{T\subseteq S}c_T,\qquad c_T=\sum_{S\subseteq T}(-1)^{|T|-|S|}g(S).$$
@@ -26,6 +27,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from functools import lru_cache
 from typing import Dict, Iterable, List, Sequence, Tuple
+
 
 __all__ = [
     "full",
@@ -63,6 +65,8 @@ def subsets_of(mask: int) -> Iterable[int]:
 # --------------------------------------------------------------------------------------
 # zeta / Mobius transforms on the Boolean lattice
 # --------------------------------------------------------------------------------------
+
+
 def mobius(q: int, g: Dict[int, int]) -> Dict[int, int]:
     """Mobius transform: ``c_T = sum_{S subset T} (-1)^{|T|-|S|} g(S)``."""
     c: Dict[int, int] = {}
@@ -93,6 +97,8 @@ def coefficients_to_g(q: int, c: Dict[int, int]) -> Dict[int, int]:
 # --------------------------------------------------------------------------------------
 # the polynomial object
 # --------------------------------------------------------------------------------------
+
+
 @dataclass(frozen=True)
 class AdmissiblePolynomial:
     """A multilinear polynomial stored by its values ``g(S) = P(1_S)`` on the cube.
@@ -107,6 +113,9 @@ class AdmissiblePolynomial:
     g: Dict[int, int]
 
     def __post_init__(self) -> None:
+        """Post init.
+        
+        """
         if len(self.g) != 2 ** self.q:
             raise ValueError("g must have 2**q entries")
         if set(self.g.values()) - {0, 1}:
@@ -123,9 +132,21 @@ class AdmissiblePolynomial:
         return self.g[sum(1 << i for i, xi in enumerate(x) if xi)]
 
     def is_boolean(self) -> bool:
+        """Is boolean.
+        
+        Returns:
+            The computed result
+        
+        """
         return set(self.g.values()) <= {0, 1}
 
     def coefficients(self) -> Dict[int, int]:
+        """Coefficients.
+        
+        Returns:
+            The computed result
+        
+        """
         return {T: v for T, v in self.c.items() if v}
 
     # -- admissibility -----------------------------------------------------------
@@ -155,6 +176,12 @@ class AdmissiblePolynomial:
         return False
 
     def qs_ratio(self) -> float:
+        """Qs ratio.
+        
+        Returns:
+            float: Result of type float
+        
+        """
         s = self.max_negative_level()
         if s <= 0:
             return float("inf")
@@ -186,7 +213,19 @@ class AdmissiblePolynomial:
 # --------------------------------------------------------------------------------------
 # helpers
 # --------------------------------------------------------------------------------------
+
+
 def is_admissible(g: Dict[int, int], q: int) -> bool:
+    """Is admissible.
+    
+    Args:
+        g:
+        q:
+    
+    Returns:
+        The computed result
+    
+    """
     return from_g(q, g).is_admissible()
 
 
@@ -196,4 +235,14 @@ def boolean_p(P: AdmissiblePolynomial, S: int) -> int:
 
 
 def qs_ratio(g: Dict[int, int], q: int) -> float:
+    """Qs ratio.
+    
+    Args:
+        g:
+        q:
+    
+    Returns:
+        The computed result
+    
+    """
     return from_g(q, g).qs_ratio()
