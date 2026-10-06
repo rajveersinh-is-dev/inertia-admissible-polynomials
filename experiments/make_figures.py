@@ -1,12 +1,16 @@
 """Figures: admissible region, inertia growth, and the coefficient profile."""
+from __future__ import annotations
+
 import sys, os, json
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'src'))
-import numpy as np
-import matplotlib
-matplotlib.use("Agg")
-import matplotlib.pyplot as plt
+
 from qspoly import from_g, coefficients_to_g
 from qspoly.graphs import neps_inertia
+import matplotlib
+import matplotlib.pyplot as plt
+import numpy as np
+
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'src'))
+matplotlib.use("Agg")
 
 FIG = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'figures')
 os.makedirs(FIG, exist_ok=True)
@@ -15,17 +19,40 @@ plt.rcParams.update({"font.size": 9, "axes.grid": True, "grid.alpha": 0.3,
 
 
 def published_7_3():
+    """Published 7 3.
+    
+    Returns:
+        The computed result
+    
+    """
+    """M.
+    
+    Args:
+        ts:
+    
+    Returns:
+        The computed result
+    
+    """
     def m(ts): return sum(1 << (i - 1) for i in ts)
     c = {}
-    for t in [(1,3),(2,3),(1,4),(2,4),(5,6),(5,7)]:      c[m(t)] = 1
+    for t in [(1,3),(2,3),(1,4),(2,4),(5,6),(5,7)]:
+        c[m(t)] = 1
     for t in [(1,2,3),(1,2,4),(1,3,4),(2,3,4),
               (1,5,6),(2,5,6),(3,5,7),(4,5,7),(5,6,7)]:   c[m(t)] = -1
-    for t in [(1,2,5,6),(3,4,5,7)]:                      c[m(t)] = 1
+    for t in [(1,2,5,6),(3,4,5,7)]:
+        c[m(t)] = 1
     c[m(tuple(range(1, 8)))] = 1
     return from_g(7, coefficients_to_g(7, c))
 
 
-def load_scan():
+def load_scan() -> list:
+    """Load and parse scan.
+    
+    Returns:
+        list: Result of type list
+    
+    """
     p = 'results/scan_certified.json'
     if not os.path.exists(p):
         return []
@@ -33,7 +60,12 @@ def load_scan():
 
 
 # ---------------------------------------------------------------- Fig 1: s_min(q)
+
+
 def fig1():
+    """Fig1.
+    
+    """
     rows = [r for r in load_scan() if r.get("certified") and r.get("s")]
     if not rows:
         return
@@ -63,7 +95,12 @@ def fig1():
 
 
 # ------------------------------------------------- Fig 2: inertia growth (7,3)
+
+
 def fig2():
+    """Fig2.
+    
+    """
     P = published_7_3()
     ms = [2, 3, 4, 5, 6, 7, 8, 9, 10]
     pos = [neps_inertia(P, m)[0] for m in ms]
@@ -85,7 +122,12 @@ def fig2():
 
 
 # ------------------------------------------- Fig 3: coefficient level profile
+
+
 def fig3():
+    """Fig3.
+    
+    """
     P = published_7_3()
     c = P.c
     levels = list(range(0, P.q + 1))
