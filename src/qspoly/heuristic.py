@@ -50,6 +50,18 @@ def verify(g: Dict[int, int], q: int, s: int) -> bool:
 
 
 def _score(c: Dict[int, int], q: int, s: int, weight: int = 4) -> int:
+    """Score.
+    
+    Args:
+        c:
+        q:
+        s:
+        weight (int):
+    
+    Returns:
+        The computed result
+    
+    """
     J = 0
     fq = full(q)
     for T in range(1 << q):
@@ -116,7 +128,8 @@ def heuristic_search(q: int, s: int, restarts: int = 20, iters: int = 20000,
                 g[S] = 1 - g[S]
                 J = newJ
             else:
-                for T, v in zip(sup, old[:-1]):
+                for T, v in zip(sup, old[:
+                    -1]):
                     c[T] = v
                 c[fq] = old[-1]
         if best_J is None or J < best_J:
