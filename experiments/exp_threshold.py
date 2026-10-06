@@ -7,10 +7,11 @@ and record whether a witness was found.  A "not found" verdict is evidence only.
 Budgets are wall-clock bounded so this script always terminates quickly.
 """
 import sys, os, json, time
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'src'))
+
 from qspoly import from_g
-from qspoly.milp import feasible_at_level
 from qspoly.heuristic import heuristic_search, greedy_warm_start, verify
+from qspoly.milp import feasible_at_level
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'src'))
 
 TL = float(sys.argv[1]) if len(sys.argv) > 1 else 30.0     # MILP seconds per probe
 SMIN = int(sys.argv[2]) if len(sys.argv) > 2 else 1

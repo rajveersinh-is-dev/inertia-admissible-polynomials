@@ -18,6 +18,15 @@ __all__ = ["exact_inertia", "exact_inertia_from_charpoly", "floating_inertia"]
 
 
 def _classify(root) -> str:
+    """Classify.
+    
+    Args:
+        root:
+    
+    Returns:
+        str: Result of type str
+    
+    """
     if root.is_zero:
         return "zero"
     # exact sign test for rationals and for real algebraic numbers

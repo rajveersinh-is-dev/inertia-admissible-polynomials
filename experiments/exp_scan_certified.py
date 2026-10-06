@@ -1,9 +1,10 @@
 """Definitive certified scan of the minimal admissible level s for q = 2..14."""
 import sys, os, json, time
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'src'))
+
 from qspoly import from_g
-from qspoly.milp import minimal_level, feasible_at_level
 from qspoly.heuristic import verify
+from qspoly.milp import minimal_level, feasible_at_level
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'src'))
 
 QMIN, QMAX = int(sys.argv[1]), int(sys.argv[2])
 TL = float(sys.argv[3]) if len(sys.argv) > 3 else 900.0
