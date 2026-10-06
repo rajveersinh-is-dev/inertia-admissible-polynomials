@@ -14,12 +14,19 @@ import subprocess
 import sys
 import time
 
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 EXPS = os.path.join(ROOT, "experiments")
 TESTS = os.path.join(ROOT, "tests")
 
 
 def run(script: str, *args: str) -> None:
+    """Worker function for parallel processing.
+    
+    Args:
+        script:
+    
+    """
     path = script if os.path.isabs(script) else None
     if path is None:
         for base in (EXPS, TESTS):
@@ -37,6 +44,9 @@ def run(script: str, *args: str) -> None:
 
 
 def main() -> None:
+    """Entry point — parse arguments and run the main computation.
+    
+    """
     ap = argparse.ArgumentParser()
     ap.add_argument("--full", action="store_true",
                     help="also run the certified MILP scan (slow)")
