@@ -19,7 +19,6 @@ $n^+(G_m)=\Theta(m^q)$, $n^-(G_m)=\Theta(m^s)$.
 """
 from __future__ import annotations
 
-import itertools
 from typing import Dict, List, Tuple
 
 from .boolean import AdmissiblePolynomial, full, popcount, subsets_of
